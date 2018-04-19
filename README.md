@@ -1,5 +1,6 @@
 # ofxSeekThermal
 simple addon to use SeekThermal compact thermo cam in openframeworks app
+![alt text](https://github.com/hzikajr/ofxSeekThermal/raw/master/ofxaddons_thumbnail.png "Preview")
 
 ## Mega thanks:
 maartenvds's amazing repo

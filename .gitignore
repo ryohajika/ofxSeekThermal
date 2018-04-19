@@ -1,0 +1,5 @@
+*.depend
+*.app*
+*.pbxuser
+*.DS_*
+*.xcworkspacedata

@@ -2,24 +2,27 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	thermo.setup();
-	buf.allocate(THERMAL_WIDTH, THERMAL_HEIGHT, OF_IMAGE_COLOR);
+	cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT);
+	img.allocate(THERMAL_WIDTH, THERMAL_HEIGHT, OF_IMAGE_COLOR);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	if(thermo.isInitialized()){
-		thermo.update();
-		if(thermo.isFrameNew()){
-			ofPixels & pix = thermo.getPixels();
-			buf.setFromPixels(pix);
+	if(cam.isInitialized()){
+		if(cam.isFrameNew()){
+			img.setFromPixels(cam.getVisualizePixels());
 		}
 	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	buf.draw(10, 10);
+	img.draw(10, 10);
+}
+
+//--------------------------------------------------------------
+void ofApp::exit(){
+	cam.close();
 }
 
 //--------------------------------------------------------------

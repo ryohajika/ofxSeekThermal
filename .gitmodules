@@ -1,0 +1,3 @@
+[submodule "libs/libseek-thermal"]
+	path = libs/libseek-thermal
+	url = https://github.com/ryohajika/libseek-thermal.git

@@ -17,11 +17,11 @@ common:
 	ADDON_SOURCES += src
 
 	ADDON_SOURCES_EXCLUDE += libs/libseek-thermal/build/%
-	ADDON_SOURCES_EXCLUDE += libs/libseek-thermal/src/%.cpp
+	#ADDON_SOURCES_EXCLUDE += libs/libseek-thermal/src/%.cpp
 	ADDON_SOURCES_EXCLUDE += libs/libseek-thermal/cmake/%
 	ADDON_SOURCES_EXCLUDE += libs/libseek-thermal/doc/%
 	ADDON_SOURCES_EXCLUDE += libs/libseek-thermal/examples/%
 
 osx:
 	ADDON_LIBS += libs/libusb/lib/osx/usb-1.0.0.a
-	ADDON_LIBS += libs/libseek-thermal/build/src/libseek_static.a
+	#ADDON_LIBS += libs/libseek-thermal/build/src/libseek_static.a

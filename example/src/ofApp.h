@@ -2,14 +2,16 @@
 
 #include "ofMain.h"
 #include "ofxSeekThermal.h"
+#include "opencv2/opencv.hpp"
+
+//#define CREATE_FLATFIELD 1
+#define FLATFIELD_DATA_PATH "flatfield.png"  // this data will be bundled to .app file
 
 class ofApp : public ofBaseApp{
-
 	public:
 		void setup();
 		void update();
 		void draw();
-        void exit();
 
 		void keyPressed(int key);
 		void keyReleased(int key);
@@ -25,4 +27,5 @@ class ofApp : public ofBaseApp{
         
         ofxSeekThermalGrabber cam;
         ofImage img;
+        ofImage rawImg;
 };

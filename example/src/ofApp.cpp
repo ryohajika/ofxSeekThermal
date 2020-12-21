@@ -2,8 +2,18 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    ofSetVerticalSync(true);
+    ofSetFrameRate(60);
+    
+#ifdef CREATE_FLATFIELD
+    cam.setCreateFlatfield(300, 80, FLATFIELD_DATA_PATH);
 	cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT);
+#else
+    cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT, FLATFIELD_DATA_PATH);
+//    cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT);
+#endif
 	img.allocate(THERMAL_WIDTH, THERMAL_HEIGHT, OF_IMAGE_COLOR);
+    rawImg.allocate(THERMAL_WIDTH, THERMAL_HEIGHT, OF_IMAGE_GRAYSCALE);
 }
 
 //--------------------------------------------------------------
@@ -11,18 +21,15 @@ void ofApp::update(){
 	if(cam.isInitialized()){
 		if(cam.isFrameNew()){
 			img.setFromPixels(cam.getVisualizePixels());
+            rawImg.setFromPixels(cam.getRawPixels());
 		}
 	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	img.draw(10, 10);
-}
-
-//--------------------------------------------------------------
-void ofApp::exit(){
-	cam.close();
+	img.draw(10, 10, img.getWidth()*2, img.getHeight()*2);
+    rawImg.draw(10, 10+img.getHeight()*2, rawImg.getWidth()*2, rawImg.getHeight()*2);
 }
 
 //--------------------------------------------------------------

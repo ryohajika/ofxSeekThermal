@@ -1,13 +1,9 @@
 #pragma once
 
+#include "seek.h"
 #include "ofxSeekThermalBase.h"
+#include "ofxSeekThermalUtility.h"
 #include "ofThread.h"
-
-// forward declaration from ofxSeekThermalBase.h
-double ofxSeekThermal::temp_from_raw(int, int);
-void ofxSeekThermal::process_frame(cv::Mat&, cv::Mat&, float, int, int, bool);
-void ofxSeekThermal::writepgm(const cv::Mat&, const std::string&, const int, const std::string&, const bool);
-inline void ofxSeekThermal::toOf(const cv::Mat&, ofPixels&);
 
 #pragma mark ofxSeekThermalGrabber
 // referred to ofAVFoundationGrabber impl
@@ -20,6 +16,8 @@ class ofxSeekThermalGrabber : public ofxSeekThermalBaseGrabber,
         bool isFrameNew() const;
         void close();
         bool setup(ofxSeekCamType type);
+        bool setup(ofxSeekCamType type, std::string flatfield_img_path);
+        void setCreateFlatfield(unsigned warmupframes, unsigned smoothingframes, std::string full_file_path_with_extension);
         
         ofShortPixels & getRawPixels();
         const ofShortPixels & getRawPixels() const;
@@ -41,6 +39,7 @@ class ofxSeekThermalGrabber : public ofxSeekThermalBaseGrabber,
         cv::ColormapTypes getCVColorMap() const;
   
     private:
+        bool init();
         void threadedFunction();
         float _desiredfrmtime;
         std::mutex _seekmtx;
@@ -53,13 +52,21 @@ class ofxSeekThermalGrabber : public ofxSeekThermalBaseGrabber,
         bool _b_init;
         bool _b_verbose;
         bool _b_newframe;
+        bool _b_createff;
         
         ofxSeekCamType _type;
         LibSeek::SeekCam * seek;
-        LibSeek::SeekThermalPro seekpro;
-        LibSeek::SeekThermal seekcompact;
+        LibSeek::SeekThermalPro * seekpro;
+        LibSeek::SeekThermal * seekcompact;
         cv::Mat _seekframe, _outframe;
         cv::ColormapTypes _cmType;
+        
+        unsigned _warmup_size;
+        unsigned _warmup_ct;
+        unsigned _smoothing_size;
+        unsigned _smoothing_ct;
+        cv::Mat _ff_avgframe, _ff_bufframe, _ff_u16frame;
+        std::string _ff_path;
 };
 
 //class ofxSeekThermalPlayer : public ofxSeekThermalBase{

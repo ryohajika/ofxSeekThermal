@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120B1161A21CAF602894E4F9 /* SeekCam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E64B8E76D01816D5DE4662E9 /* SeekCam.cpp */; };
 		169D3C72FDE6C5590A1616F5 /* ofxCvFloatImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A03390302D5A2C9F0E4AB /* ofxCvFloatImage.cpp */; };
 		1D5F3298C2FA073628012944 /* ofxCvContourFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C76DE5C29BDBD2CAA1DD0021 /* ofxCvContourFinder.cpp */; };
 		250A95BA26587BE85DB0A353 /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9C7160245B19131DAE6128 /* ofxCvColorImage.cpp */; };
+		37998FB66A72B25A5890F114 /* SeekDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C2FD654CAEE37B604CD7 /* SeekDevice.cpp */; };
 		4E52549D7CDF57B150688A8A /* ofxSeekThermal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E013228EE69A308B5A3AE3C7 /* ofxSeekThermal.cpp */; };
 		63020F16C7E8DED980111241 /* ofxCvImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6151136D101F857DAE12722 /* ofxCvImage.cpp */; };
+		64171EF81870B876CBB557C6 /* SeekThermal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C589B735761A91731FA1228C /* SeekThermal.cpp */; };
 		D3301F6A0B43BB293ED97C1D /* ofxCvShortImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DD23693DFAB8EC05FAA5D /* ofxCvShortImage.cpp */; };
+		D5DEEB46E2AA80F6A77EDBF9 /* SeekThermalPro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1079AB01434882F415865F1 /* SeekThermalPro.cpp */; };
 		E212C821D1064B92DD953A42 /* ofxCvHaarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A16CBF2E8CFE43AF54FE6F5 /* ofxCvHaarFinder.cpp */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
@@ -214,6 +218,7 @@
 		6D342CFFCF5D9307A6E53917 /* eigen.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = eigen.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv4/opencv2/core/eigen.hpp; sourceTree = SOURCE_ROOT; };
 		6DD5A3CBB6D5BBA1C1354F1B /* flann.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = flann.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/flann.hpp; sourceTree = SOURCE_ROOT; };
 		6E83C734185FD908327DE86C /* intrin_vsx.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = intrin_vsx.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/hal/intrin_vsx.hpp; sourceTree = SOURCE_ROOT; };
+		6F02C2FD654CAEE37B604CD7 /* SeekDevice.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SeekDevice.cpp; path = "../../../addons/ofxSeekThermal/libs/libseek-thermal/src/SeekDevice.cpp"; sourceTree = SOURCE_ROOT; };
 		6F29F3D6167DD47F774F6BA3 /* constants_c.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = constants_c.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv4/opencv2/video/legacy/constants_c.h; sourceTree = SOURCE_ROOT; };
 		6F3559D2259D67565B4F9B0F /* hierarchical_clustering_index.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = hierarchical_clustering_index.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv4/opencv2/flann/hierarchical_clustering_index.h; sourceTree = SOURCE_ROOT; };
 		704DCFE42516C774B24026C6 /* utility.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = utility.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/cuda/utility.hpp; sourceTree = SOURCE_ROOT; };
@@ -382,6 +387,7 @@
 		C4FB85020773DA0F09B8B6CE /* ts_gtest.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ts_gtest.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/ts/ts_gtest.h; sourceTree = SOURCE_ROOT; };
 		C50215EF482D9C9D6EBF4D12 /* ofxSeekThermalBase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSeekThermalBase.h; path = ../../../addons/ofxSeekThermal/src/ofxSeekThermalBase.h; sourceTree = SOURCE_ROOT; };
 		C53744BDA631164AFE83EE0C /* ovx.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ovx.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/ovx.hpp; sourceTree = SOURCE_ROOT; };
+		C589B735761A91731FA1228C /* SeekThermal.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SeekThermal.cpp; path = "../../../addons/ofxSeekThermal/libs/libseek-thermal/src/SeekThermal.cpp"; sourceTree = SOURCE_ROOT; };
 		C5A7A384214117831A33F77D /* opencv.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = opencv.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv4/opencv2/opencv.hpp; sourceTree = SOURCE_ROOT; };
 		C5F98320E913E421C8B20275 /* base.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv4/opencv2/core/base.hpp; sourceTree = SOURCE_ROOT; };
 		C6054B8E81EF9D0DB91868B5 /* optim.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = optim.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/optim.hpp; sourceTree = SOURCE_ROOT; };
@@ -425,6 +431,7 @@
 		D6BB8CE1E07DF01F316CD53D /* type_traits.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = type_traits.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/cuda/type_traits.hpp; sourceTree = SOURCE_ROOT; };
 		D6CA4AE545446E2FC6B000E4 /* funcattrib.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = funcattrib.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/cuda/funcattrib.hpp; sourceTree = SOURCE_ROOT; };
 		D80E53994A479B2B3390083D /* opencl_gl_wrappers.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = opencl_gl_wrappers.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl_wrappers.hpp; sourceTree = SOURCE_ROOT; };
+		D81B49E8F23FDB5FFE059CC9 /* ofxSeekThermalUtility.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSeekThermalUtility.h; path = ../../../addons/ofxSeekThermal/src/ofxSeekThermalUtility.h; sourceTree = SOURCE_ROOT; };
 		D847EBE484F4F500F9CF2549 /* ofxCvImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxCvImage.h; path = ../../../addons/ofxOpenCv/src/ofxCvImage.h; sourceTree = SOURCE_ROOT; };
 		D8488BEE2CBE9CF46BD61268 /* type_traits_detail.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = type_traits_detail.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/cuda/detail/type_traits_detail.hpp; sourceTree = SOURCE_ROOT; };
 		D897DE20250FB8F8DAB94875 /* ios.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ios.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/imgcodecs/ios.h; sourceTree = SOURCE_ROOT; };
@@ -446,6 +453,7 @@
 		E013228EE69A308B5A3AE3C7 /* ofxSeekThermal.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxSeekThermal.cpp; path = ../../../addons/ofxSeekThermal/src/ofxSeekThermal.cpp; sourceTree = SOURCE_ROOT; };
 		E01D7F496E9E90D0E396DD43 /* imgcodecs_c.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = imgcodecs_c.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/imgcodecs/imgcodecs_c.h; sourceTree = SOURCE_ROOT; };
 		E0EFCD7BD0DB8EF999F0E22C /* types.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = types.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/gapi/own/types.hpp; sourceTree = SOURCE_ROOT; };
+		E1079AB01434882F415865F1 /* SeekThermalPro.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SeekThermalPro.cpp; path = "../../../addons/ofxSeekThermal/libs/libseek-thermal/src/SeekThermalPro.cpp"; sourceTree = SOURCE_ROOT; };
 		E14D3EF03E140F5604900412 /* tracking.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tracking.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/video/tracking.hpp; sourceTree = SOURCE_ROOT; };
 		E1BD25D3367340A207835E16 /* warp_reduce.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = warp_reduce.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv4/opencv2/core/cuda/warp_reduce.hpp; sourceTree = SOURCE_ROOT; };
 		E213406AB2E4149EEDABA3AC /* cvstd.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cvstd.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv4/opencv2/core/cvstd.hpp; sourceTree = SOURCE_ROOT; };
@@ -636,6 +644,7 @@
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		E4FCC9014FB0CF6D91E487B4 /* cuda.inl.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cuda.inl.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv4/opencv2/core/cuda.inl.hpp; sourceTree = SOURCE_ROOT; };
 		E5F6E381641665852B997FC4 /* allocator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = allocator.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/allocator.h; sourceTree = SOURCE_ROOT; };
+		E64B8E76D01816D5DE4662E9 /* SeekCam.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SeekCam.cpp; path = "../../../addons/ofxSeekThermal/libs/libseek-thermal/src/SeekCam.cpp"; sourceTree = SOURCE_ROOT; };
 		E71CE83DCA2F2DB8E31BB64F /* detection_based_tracker.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = detection_based_tracker.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/objdetect/detection_based_tracker.hpp; sourceTree = SOURCE_ROOT; };
 		E78B59D941B1A09796A14A24 /* bindings_utils.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bindings_utils.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/bindings_utils.hpp; sourceTree = SOURCE_ROOT; };
 		E7DD47EE16E493E5BCFBE7D0 /* features2d.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = features2d.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/features2d.hpp; sourceTree = SOURCE_ROOT; };
@@ -714,6 +723,7 @@
 				E013228EE69A308B5A3AE3C7 /* ofxSeekThermal.cpp */,
 				B48898AC41474419977C95D8 /* ofxSeekThermal.h */,
 				C50215EF482D9C9D6EBF4D12 /* ofxSeekThermalBase.h */,
+				D81B49E8F23FDB5FFE059CC9 /* ofxSeekThermalUtility.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -969,10 +979,14 @@
 		3344B14336E99D3F72F4FB85 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				E64B8E76D01816D5DE4662E9 /* SeekCam.cpp */,
 				D0E0E0BB1D88BFCD4BABFB60 /* SeekCam.h */,
+				6F02C2FD654CAEE37B604CD7 /* SeekDevice.cpp */,
 				8E844E436BEAFE6CBE350CA7 /* SeekDevice.h */,
 				66778F82037932C17B4C0CEC /* SeekLogging.h */,
+				C589B735761A91731FA1228C /* SeekThermal.cpp */,
 				599FE6EF2F10FED2F0AE47B8 /* SeekThermal.h */,
+				E1079AB01434882F415865F1 /* SeekThermalPro.cpp */,
 				E4BADFE31E21E8595899B734 /* SeekThermalPro.h */,
 				9C6F3E95452B179E77A36808 /* seek.h */,
 			);
@@ -2003,7 +2017,7 @@
 				BB4B014C10F69532006C3DED /* addons */,
 				6948EE371B920CB800B5AC1A /* local_addons */,
 				E4B69B5B0A3A1756003C02F2 /* exampleDebug.app */,
-				E9338F7B2589CDD000A81333 /* Recovered References */,
+				E9A2F0742590BD4800E5812A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2026,7 +2040,7 @@
 			name = features2d;
 			sourceTree = "<group>";
 		};
-		E9338F7B2589CDD000A81333 /* Recovered References */ = {
+		E9A2F0742590BD4800E5812A /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				80B467E440C56D65F28B5A33 /* src */,
@@ -2239,6 +2253,10 @@
 				E212C821D1064B92DD953A42 /* ofxCvHaarFinder.cpp in Sources */,
 				63020F16C7E8DED980111241 /* ofxCvImage.cpp in Sources */,
 				D3301F6A0B43BB293ED97C1D /* ofxCvShortImage.cpp in Sources */,
+				120B1161A21CAF602894E4F9 /* SeekCam.cpp in Sources */,
+				37998FB66A72B25A5890F114 /* SeekDevice.cpp in Sources */,
+				64171EF81870B876CBB557C6 /* SeekThermal.cpp in Sources */,
+				D5DEEB46E2AA80F6A77EDBF9 /* SeekThermalPro.cpp in Sources */,
 				FA033585E736A718ED18D431 /* src in Sources */,
 				4E52549D7CDF57B150688A8A /* ofxSeekThermal.cpp in Sources */,
 			);
@@ -2346,9 +2364,6 @@
 					../../../addons/ofxOpenCv/src,
 					../../../addons/ofxSeekThermal/libs,
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles/3.19.1",
@@ -2372,10 +2387,6 @@
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/examples",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/src",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/win",
-					../../../addons/ofxSeekThermal/libs/libseekthermal,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/include,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib/osx,
 					../../../addons/ofxSeekThermal/libs/libusb,
 					../../../addons/ofxSeekThermal/libs/libusb/include,
 					../../../addons/ofxSeekThermal/libs/libusb/lib,
@@ -2484,9 +2495,6 @@
 					../../../addons/ofxOpenCv/src,
 					../../../addons/ofxSeekThermal/libs,
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles/3.19.1",
@@ -2510,10 +2518,6 @@
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/examples",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/src",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/win",
-					../../../addons/ofxSeekThermal/libs/libseekthermal,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/include,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib/osx,
 					../../../addons/ofxSeekThermal/libs/libusb,
 					../../../addons/ofxSeekThermal/libs/libusb/include,
 					../../../addons/ofxSeekThermal/libs/libusb/lib,
@@ -2536,9 +2540,7 @@
 					"$(LIB_OF)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
 					"../../../addons/ofxSeekThermal/libs/libusb/lib/osx/usb-1.0.0.a",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx/libseek_static.a",
 					"../../../addons/ofxSeekThermal/libs/libusb/lib/osx/usb-1.0.0.a",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx/libseek_static.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -2643,9 +2645,6 @@
 					../../../addons/ofxOpenCv/src,
 					../../../addons/ofxSeekThermal/libs,
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles/3.19.1",
@@ -2669,10 +2668,6 @@
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/examples",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/src",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/win",
-					../../../addons/ofxSeekThermal/libs/libseekthermal,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/include,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib/osx,
 					../../../addons/ofxSeekThermal/libs/libusb,
 					../../../addons/ofxSeekThermal/libs/libusb/include,
 					../../../addons/ofxSeekThermal/libs/libusb/lib,
@@ -2792,9 +2787,6 @@
 					../../../addons/ofxOpenCv/src,
 					../../../addons/ofxSeekThermal/libs,
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles/3.19.1",
@@ -2818,10 +2810,6 @@
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/examples",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/src",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/win",
-					../../../addons/ofxSeekThermal/libs/libseekthermal,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/include,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib/osx,
 					../../../addons/ofxSeekThermal/libs/libusb,
 					../../../addons/ofxSeekThermal/libs/libusb/include,
 					../../../addons/ofxSeekThermal/libs/libusb/lib,
@@ -2930,9 +2918,6 @@
 					../../../addons/ofxOpenCv/src,
 					../../../addons/ofxSeekThermal/libs,
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles/3.19.1",
@@ -2956,10 +2941,6 @@
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/examples",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/src",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/win",
-					../../../addons/ofxSeekThermal/libs/libseekthermal,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/include,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib/osx,
 					../../../addons/ofxSeekThermal/libs/libusb,
 					../../../addons/ofxSeekThermal/libs/libusb/include,
 					../../../addons/ofxSeekThermal/libs/libusb/lib,
@@ -2982,9 +2963,7 @@
 					"$(LIB_OF_DEBUG)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
 					"../../../addons/ofxSeekThermal/libs/libusb/lib/osx/usb-1.0.0.a",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx/libseek_static.a",
 					"../../../addons/ofxSeekThermal/libs/libusb/lib/osx/usb-1.0.0.a",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx/libseek_static.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
@@ -3078,9 +3057,6 @@
 					../../../addons/ofxOpenCv/src,
 					../../../addons/ofxSeekThermal/libs,
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/build/CMakeFiles/3.19.1",
@@ -3104,10 +3080,6 @@
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/examples",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/src",
 					"../../../addons/ofxSeekThermal/libs/libseek-thermal/win",
-					../../../addons/ofxSeekThermal/libs/libseekthermal,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/include,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib,
-					../../../addons/ofxSeekThermal/libs/libseekthermal/lib/osx,
 					../../../addons/ofxSeekThermal/libs/libusb,
 					../../../addons/ofxSeekThermal/libs/libusb/include,
 					../../../addons/ofxSeekThermal/libs/libusb/lib,
@@ -3130,9 +3102,7 @@
 					"$(LIB_OF)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
 					"../../../addons/ofxSeekThermal/libs/libusb/lib/osx/usb-1.0.0.a",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx/libseek_static.a",
 					"../../../addons/ofxSeekThermal/libs/libusb/lib/osx/usb-1.0.0.a",
-					"../../../addons/ofxSeekThermal/libs/libseek-thermal-libs/lib/osx/libseek_static.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -7,14 +7,11 @@ maartenvds's amazing repo
 https://github.com/OpenThermal/libseek-thermal
 
 ## tested on:
-MacBook Pro (15-inch, Mid 2014), OSX 10.14.6, oF0.11.0.
+MacBook Pro (15-inch, late 2018), macOS 11.0, oF0.11.0.
 
 ## TODO:
-- add a function to make "flat field" to calibrate camera input
 - support open/close capability of seek camera while an ofApp is running
-
-## you might need to do...
-compile original libseek-thermal library on your environment because the attached one was compiled on my macintosh system.
+- put some info how to use this
 
 ### created by:
 Ryo Hajika (imaginaryShort)

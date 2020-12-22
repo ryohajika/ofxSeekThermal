@@ -3,3 +3,8 @@
 *.pbxuser
 *.DS_*
 *.xcworkspacedata
+example/Makefile
+example/openFrameworks-Info.plist
+example/Project.xcconfig
+example/bin
+example/example.xcodeproj

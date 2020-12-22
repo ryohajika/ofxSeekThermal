@@ -12,6 +12,8 @@ void ofApp::setup(){
     cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT, FLATFIELD_DATA_PATH);
 //    cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT);
 #endif
+    cam.setVerbose(false);
+    
 	img.allocate(THERMAL_WIDTH, THERMAL_HEIGHT, OF_IMAGE_COLOR);
     rawImg.allocate(THERMAL_WIDTH, THERMAL_HEIGHT, OF_IMAGE_GRAYSCALE);
 }

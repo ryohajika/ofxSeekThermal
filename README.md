@@ -9,8 +9,8 @@ https://github.com/OpenThermal/libseek-thermal
 https://github.com/hoehermann/libseek-thermal/tree/temp-info_compact
 
 ## tested on:
-MacBook Pro (15-inch, mid 2014), MacOSX 10.14.6, oF0.11.0
-MacBook Pro (15-inch, late 2018), macOS 11.0, oF0.11.0
+- MacBook Pro (15-inch, mid 2014), MacOSX 10.14.6, oF0.11.0
+- MacBook Pro (15-inch, late 2018), macOS 11.0, oF0.11.0
 
 ## How to use:
 1. Update `opencv.a` in ofxOpenCv in your OF directory
@@ -37,6 +37,10 @@ After these you can run the example project.
 
 ## Implementation details:
 The `ofxSeekThermalGrabber` is implemented based on `ofVideoGrabber` and `ofAVFoundationGrabber`. You can use the same method most of the case to setup, update, and draw pixels. Please check out `ofxSeekThermal.h` for the methods available.
+With a method `setCreateFlatField(unsigned int warmup_frame_count, unsigned int smoothing_frame_count, std::string flatfield_image_path)` to create a FlatField (refer an example in libseek-thermal) to calibrate camera. **Note on this method: it smoothen the frame out put, however, it affects the absolute temperature estimation.**
+In a header file `ofxSeekThermalUtility.h`, some utility functions are implemented. You can use `ofxSeekThermal::toOf` and `ofxSeekThermal::toCv` to convert color image frames between `ofPixels` and `cv::Mat`. **Cannot be used to convert raw frame at this point**
+Better to use `cv::imwrite` to export raw frame data, but you need to customize some part of source code at this point (it will be implemented as a method belongs to the `ofxSeekThermalGrabber` class soon!)
+You can switch console log ON/OFF by using a method `setVerbose(bool true_or_false)` if you want to see/shutoff log around thermal camera.
 
 ## TODO:
 - support open/close capability of seek camera while an ofApp is running

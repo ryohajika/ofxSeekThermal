@@ -154,7 +154,7 @@ void ofxSeekThermalGrabber::threadedFunction(){
                     }else{
                         _ff_avgframe /= _smoothing_size;
                         _ff_avgframe.convertTo(_ff_u16frame, CV_16UC1);
-                        std::cout << _ff_u16frame.cols << ", " << _ff_u16frame.rows << ", " << _ff_u16frame.channels() << std::endl;
+//                        jjjjjjjjstd::cout << _ff_u16frame.cols << ", " << _ff_u16frame.rows << ", " << _ff_u16frame.channels() << std::endl;
                         cv::imwrite(_ff_path, _ff_u16frame);
                         ofLogNotice("ofxSeekThermalGrabber::threadedFunction(FlatField)",
                                     "Exported Flatfield Information: %s", _ff_path.c_str());

@@ -37,7 +37,8 @@ static double temp_from_raw(int x, int device) {
 }
 
 // Function to process a raw (corrected) seek frame
-static void process_frame(cv::Mat &inframe, cv::Mat &outframe, float scale, int colormap, int device_temp_sensor, bool b_verbose) {
+static void process_frame(cv::Mat &inframe, cv::Mat &outframe,
+                          float scale, int colormap, int device_temp_sensor, bool b_verbose) {
     cv::Mat frame_g8_nograd, frame_g16; // Transient Mat containers for processing
 
     // get raw max/min/central values

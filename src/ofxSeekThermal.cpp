@@ -108,7 +108,8 @@ bool ofxSeekThermalGrabber::init(){
         }
     }
 }
-void ofxSeekThermalGrabber::setCreateFlatfield(unsigned int warmupframes, unsigned int smoothingframes, std::string full_file_path_with_extension){
+void ofxSeekThermalGrabber::setCreateFlatfield(unsigned int warmupframes, unsigned int smoothingframes,
+                                               std::string full_file_path_with_extension){
     _b_createff = true;
     
     _warmup_size = warmupframes;
@@ -154,7 +155,7 @@ void ofxSeekThermalGrabber::threadedFunction(){
                     }else{
                         _ff_avgframe /= _smoothing_size;
                         _ff_avgframe.convertTo(_ff_u16frame, CV_16UC1);
-//                        jjjjjjjjstd::cout << _ff_u16frame.cols << ", " << _ff_u16frame.rows << ", " << _ff_u16frame.channels() << std::endl;
+//                      std::cout << _ff_u16frame.cols << ", " << _ff_u16frame.rows << ", " << _ff_u16frame.channels() << std::endl;
                         cv::imwrite(_ff_path, _ff_u16frame);
                         ofLogNotice("ofxSeekThermalGrabber::threadedFunction(FlatField)",
                                     "Exported Flatfield Information: %s", _ff_path.c_str());
@@ -220,6 +221,10 @@ const ofShortPixels & ofxSeekThermalGrabber::getRawPixels() const{
     //std::unique_lock<std::mutex> lock(_seekmtx);
     return _rawPixels;
 }
+void ofxSeekThermalGrabber::getRawCVFrame(cv::Mat &dst){
+    std::unique_lock<std::mutex> lock(_seekmtx);
+    _seekframe.copyTo(dst);
+}
 ofPixels & ofxSeekThermalGrabber::getVisualizePixels(){
     std::unique_lock<std::mutex> lock(_seekmtx);
     return _visPixels;
@@ -227,6 +232,10 @@ ofPixels & ofxSeekThermalGrabber::getVisualizePixels(){
 const ofPixels & ofxSeekThermalGrabber::getVisualizePixels() const{
     //std::unique_lock<std::mutex> lock(_seekmtx);
     return _visPixels;
+}
+void ofxSeekThermalGrabber::getVisualizeCVFrame(cv::Mat &dst){
+    std::unique_lock<std::mutex> lock(_seekmtx);
+    _outframe.copyTo(dst);
 }
 
 void ofxSeekThermalGrabber::setVerbose(bool bTalkToMe){

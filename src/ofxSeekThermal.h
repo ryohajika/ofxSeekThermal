@@ -17,12 +17,16 @@ class ofxSeekThermalGrabber : public ofxSeekThermalBaseGrabber,
         void close();
         bool setup(ofxSeekCamType type);
         bool setup(ofxSeekCamType type, std::string flatfield_img_path);
-        void setCreateFlatfield(unsigned warmupframes, unsigned smoothingframes, std::string full_file_path_with_extension);
+        void setCreateFlatfield(unsigned warmupframes, unsigned smoothingframes,
+                                std::string full_file_path_with_extension);
         
         ofShortPixels & getRawPixels();
         const ofShortPixels & getRawPixels() const;
+        void getRawCVFrame(cv::Mat &dst);
+        
         ofPixels & getVisualizePixels();
         const ofPixels & getVisualizePixels() const;
+        void getVisualizeCVFrame(cv::Mat &dst);
         
         void setVerbose(bool bTalkToMe);
         void setDesiredFrameRate(int framerate);

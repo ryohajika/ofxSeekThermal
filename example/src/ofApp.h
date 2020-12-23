@@ -28,4 +28,6 @@ class ofApp : public ofBaseApp{
         ofxSeekThermalGrabber cam;
         ofImage img;
         ofImage rawImg;
+    
+    
 };

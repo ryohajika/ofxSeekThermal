@@ -94,10 +94,10 @@ static void process_frame(cv::Mat &inframe, cv::Mat &outframe,
 
 // custom pgm file writer
 static void writepgm(const cv::Mat & seekframe,
-              const std::string & prefix,
-              const int framenumber,
-              const std::string & comment,
-              const bool ascii){
+                     const std::string & prefix,
+                     const int framenumber,
+                     const std::string & comment,
+                     const bool ascii){
     std::ostringstream pgmfilename;
     pgmfilename << prefix;
     pgmfilename << std::internal << std::setfill('0') << std::setw(6);
@@ -152,7 +152,10 @@ static inline cv::Mat toCv(ofPixels_<T> &pix){
     return cv::Mat(pix.getHeight(), pix.getWidth(), CV_MAKETYPE(depth, channel), pix.getData(), 0);
 }
 
-static bool exportRawPixelBuffer(std::string file, cv::Mat &src, int64_t frameid, int fmt){
+static bool exportRawPixelBuffer(std::string file,
+                                 cv::Mat &src,
+                                 int64_t frameid,
+                                 int fmt){
     std::ofstream ofs;
     ofs.open(file);
     
@@ -176,7 +179,10 @@ static bool exportRawPixelBuffer(std::string file, cv::Mat &src, int64_t frameid
     ofs.close();
     return true;
 }
-static bool readRawPixelBuffer(std::string file, cv::Mat &dst, int64_t &frameid, int &fmt){
+static bool readRawPixelBuffer(std::string file,
+                               cv::Mat &dst,
+                               int64_t &frameid,
+                               int &fmt){
     std::ifstream ifs;
     ifs.open(file, std::ifstream::in);
     

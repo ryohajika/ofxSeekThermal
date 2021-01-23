@@ -190,6 +190,8 @@ void ofxSeekThermalGrabber::threadedFunction(){
                                 _outframe.cols, _outframe.rows, _outframe.channels());
                 }
                 _b_newframe = true;
+                _seekcv.notify_one();
+                ofNotifyEvent(new_frame_evt, _b_newframe);
             }
         }
         ofSleepMillis(_desiredfrmtime);
@@ -214,7 +216,7 @@ void ofxSeekThermalGrabber::close(){
 }
 
 ofShortPixels & ofxSeekThermalGrabber::getRawPixels(){
-    std::unique_lock<std::mutex> lock(_seekmtx);
+//    std::unique_lock<std::mutex> lock(_seekmtx);
     return _rawPixels;
 }
 const ofShortPixels & ofxSeekThermalGrabber::getRawPixels() const{
@@ -222,11 +224,11 @@ const ofShortPixels & ofxSeekThermalGrabber::getRawPixels() const{
     return _rawPixels;
 }
 void ofxSeekThermalGrabber::getRawCVFrame(cv::Mat &dst){
-    std::unique_lock<std::mutex> lock(_seekmtx);
+//    std::unique_lock<std::mutex> lock(_seekmtx);
     _seekframe.copyTo(dst);
 }
 ofPixels & ofxSeekThermalGrabber::getVisualizePixels(){
-    std::unique_lock<std::mutex> lock(_seekmtx);
+//    std::unique_lock<std::mutex> lock(_seekmtx);
     return _visPixels;
 }
 const ofPixels & ofxSeekThermalGrabber::getVisualizePixels() const{
@@ -234,7 +236,7 @@ const ofPixels & ofxSeekThermalGrabber::getVisualizePixels() const{
     return _visPixels;
 }
 void ofxSeekThermalGrabber::getVisualizeCVFrame(cv::Mat &dst){
-    std::unique_lock<std::mutex> lock(_seekmtx);
+//    std::unique_lock<std::mutex> lock(_seekmtx);
     _outframe.copyTo(dst);
 }
 

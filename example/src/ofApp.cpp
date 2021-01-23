@@ -9,8 +9,8 @@ void ofApp::setup(){
     cam.setCreateFlatfield(300, 80, FLATFIELD_DATA_PATH);
 	cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT);
 #else
-    cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT, FLATFIELD_DATA_PATH);
-//    cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT);
+//    cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT, FLATFIELD_DATA_PATH);
+    cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT);
 #endif
     cam.setVerbose(false);
     

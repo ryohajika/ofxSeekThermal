@@ -90,5 +90,4 @@ class ofxSeekThermalBasePlayer : virtual public ofxSeekThermalBase {
         virtual void previousFrame();
         virtual void setVerbose(bool bTalkToMe);
         virtual void setDesiredFrameRate(int framerate);
-        virtual void cameraSettings();
 };

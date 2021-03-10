@@ -11,6 +11,7 @@ https://github.com/hoehermann/libseek-thermal/tree/temp-info_compact
 ## tested on:
 - MacBook Pro (15-inch, mid 2014), MacOSX 10.14.6, oF0.11.0
 - MacBook Pro (15-inch, late 2018), macOS 11.0, oF0.11.0
+- Mac mini (M1, 2020), macOS 11.0.1, oF0.11.0
 
 ## How to use:
 1. Update `opencv.a` in ofxOpenCv in your OF directory

@@ -85,6 +85,7 @@ bool ofxSeekThermalGrabber::init(){
                 _b_init = true;
                 std::unique_lock<std::mutex> lock(_seekmtx);
                 seek->retrieve(_ff_u16frame);
+                ofxSeekThermal::process_frame(_ff_u16frame, _outframe, 1.0f, _cmType, seek->device_temp_sensor(), _b_verbose);
                 _warmup_ct++;
                 this->startThread();
                 return true;
@@ -162,6 +163,19 @@ void ofxSeekThermalGrabber::threadedFunction(){
                         _b_createff = false;
                     }
                 }
+                
+                for(int i=0; i<_seekframe.rows; i++){
+                    for(int j=0; j<_seekframe.cols; j++){
+                        _rawPixels.setColor(j, i, _ff_u16frame.at<unsigned short>(i,j));
+                    }
+                }
+                ofxSeekThermal::process_frame(_ff_u16frame, _outframe, 1.0f, _cmType, seek->device_temp_sensor(), _b_verbose);
+                cv::cvtColor(_outframe, _outframe, cv::COLOR_BGR2RGB);
+                ofxSeekThermal::toOf(_outframe, _visPixels);
+                _b_newframe = true;
+                _seekcv.notify_one();
+                ofNotifyEvent(new_frame_evt, _b_newframe);
+                
             }
         }else{
             if(!seek->read(_seekframe)){

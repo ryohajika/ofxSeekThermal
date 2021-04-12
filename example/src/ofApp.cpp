@@ -41,7 +41,22 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+    if(key == 'o'){
+        if(cam.isInitialized()){
+            ofLogError() << "thermal camera is already initialized";
+        }else{
+            ofLogNotice() << "initializing the thermal camera connected...";
+            cam.setup(OFX_SEEK_THERMAL_CAM_COMPACT);
+        }
+    }
+    else if(key == 'c'){
+        if(!cam.isInitialized()){
+            ofLogError() << "thermal camera is not there";
+        }else{
+            ofLogNotice() << "closing the thermal camera connected...";
+            cam.close();
+        }
+    }
 }
 
 //--------------------------------------------------------------
